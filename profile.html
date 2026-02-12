@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="profilestyle.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2 class="logo">MyDashboard</h2>
+
+    <ul>
+      <li><a href="index.html"> Dashboard</a></li>
+      <li class="active"><a href="profile.html"> Profile</a></li>
+      <li><a href="analytics.html"> Analytics</a></li>
+      <li><a href="projects.html"> Projects</a></li>
+      <li><a href="settings.html"> Settings</a></li>
+      <li><a href="logout.html"> Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+
+    <div class="navbar">
+      <h2>Profile</h2>
+
+      <div class="user">
+        <img src="Photo.jpg" alt="user">
+        <span>Admin</span>
+      </div>
+    </div>
+
+    <div class="profile-container">
+
+      <div class="profile-card">
+        <img src="Photo.jpg" alt="Profile Image" class="profile-img">
+
+        <h2>Sk Toushik Mehmood</h2>
+        <p class="role">Web Developer</p>
+
+        <div class="profile-info">
+          <p><b>Email:</b> toushik@gmail.com</p>
+          <p><b>Phone:</b> +91 9876543210</p>
+          <p><b>Location:</b> West Bengal, India</p>
+        </div>
+
+        <button class="btn">View Portfolio</button>
+      </div>
+
+      <div class="profile-form">
+        <h2>Edit Profile</h2>
+
+        <form>
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name">
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+          </div>
+
+          <div class="input-group">
+            <label>Phone</label>
+            <input type="text" placeholder="Enter your phone number">
+          </div>
+
+          <div class="input-group">
+            <label>Location</label>
+            <input type="text" placeholder="Enter your location">
+          </div>
+
+          <div class="input-group">
+            <label>About</label>
+            <textarea placeholder="Write something about yourself..."></textarea>
+          </div>
+
+          <button type="submit" class="btn save-btn">Save Changes</button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
