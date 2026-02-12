@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="settingstyle.css">
 </head>
 <body>
 
+  <!-- Sidebar -->
   <div class="sidebar">
     <h2 class="logo">MyDashboard</h2>
 
@@ -25,14 +27,146 @@
 
     <div class="navbar">
       <h2>Settings</h2>
+
+      <div class="user">
+        <img src="https://i.pravatar.cc/50" alt="user">
+        <span>Admin</span>
+      </div>
     </div>
 
-    <div class="page-box">
-      <h2>Settings Panel</h2>
-      <p>Here you can manage account settings, privacy, and dashboard settings.</p>
+    <div class="settings-container">
+
+      <div class="settings-box">
+        <h2>Account Settings</h2>
+
+        <form>
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name">
+          </div>
+
+          <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email">
+          </div>
+
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Enter your phone number">
+          </div>
+
+          <div class="input-group">
+            <label>Location</label>
+            <input type="text" placeholder="Enter your location">
+          </div>
+
+          <button type="submit" class="btn save-btn">Save Account Settings</button>
+        </form>
+      </div>
+
+      <div class="settings-box">
+        <h2>Change Password</h2>
+
+        <form>
+          <div class="input-group">
+            <label>Current Password</label>
+            <input type="password" placeholder="Enter current password">
+          </div>
+
+          <div class="input-group">
+            <label>New Password</label>
+            <input type="password" placeholder="Enter new password">
+          </div>
+
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm new password">
+          </div>
+
+          <button type="submit" class="btn save-btn">Update Password</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="settings-container">
+
+      <div class="settings-box">
+        <h2>Notification Settings</h2>
+
+        <div class="toggle-box">
+          <p>Email Notifications</p>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-box">
+          <p>SMS Notifications</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-box">
+          <p>Push Notifications</p>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+    <div class="settings-box">
+    <h2>Theme Settings</h2>
+
+    <p class="theme-text">Select Dashboard Theme:</p>
+
+    <div class="theme-buttons">
+        <button type="button" class="theme-btn" onclick="setLightMode()"> Light Mode</button>
+        <button type="button" class="theme-btn" onclick="setDarkMode()"> Dark Mode</button>
+    </div>
+
+    <button type="button" class="save-btn" onclick="applyTheme()">Apply Theme</button>
+
+    <p id="theme-message" style="margin-top:15px; font-weight:bold;"></p>
+    </div>
+
+
     </div>
 
   </div>
 
 </body>
+<script>
+  let selectedTheme = localStorage.getItem("theme") || "light";
+
+  // Apply Theme on Page Load
+  window.onload = function () {
+    document.body.classList.add(selectedTheme);
+  };
+
+  function setLightMode() {
+    selectedTheme = "light";
+    document.getElementById("theme-message").innerHTML = " Light Mode Selected";
+  }
+
+  function setDarkMode() {
+    selectedTheme = "dark";
+    document.getElementById("theme-message").innerHTML = " Dark Mode Selected";
+  }
+
+  function applyTheme() {
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(selectedTheme);
+
+    localStorage.setItem("theme", selectedTheme);
+
+    document.getElementById("theme-message").innerHTML =
+      "✅ Theme Applied Successfully!";
+  }
+</script>
+
 </html>
