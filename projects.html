@@ -1,134 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="projectstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projectstyle.css">
 </head>
 <body>
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h2 class="logo">MyDashboard</h2>
-
-    <ul>
-      <li><a href="index.html"> Dashboard</a></li>
-      <li><a href="profile.html"> Profile</a></li>
-      <li><a href="analytics.html"> Analytics</a></li>
-      <li class="active"><a href="projects.html"> Projects</a></li>
-      <li><a href="settings.html"> Settings</a></li>
-      <li><a href="logout.html"> Logout</a></li>
-    </ul>
-  </div>
-
-  <!-- Main Content -->
-  <div class="main">
-
-    <!-- Navbar -->
-    <div class="navbar">
-      <h2>Projects</h2>
-
-      <div class="user">
-        <img src="Photo.jpg" alt="user">
-        <span>Admin</span>
-      </div>
+    <div class="sidebar">
+        <h2 class="logo">MyDashboard</h2>
+        <ul>
+            <li><a href="index.html"> Dashboard</a></li>
+            <li><a href="profile.html"> Profile</a></li>
+            <li><a href="analytics.html"> Analytics</a></li>
+            <li class="active"><a href="projects.html"> Projects</a></li>
+            <li><a href="settings.html"> Settings</a></li>
+            <li><a href="logout.html"> Logout</a></li>
+        </ul>
     </div>
-
-    <!-- Project Cards -->
-    <div class="project-cards">
-
-      <div class="project-card">
-        <h3>Doctor Appointment System</h3>
-        <p class="project-desc">A web app for booking doctor appointments online.</p>
-
-        <div class="project-progress">
-          <p>Progress: <b>80%</b></p>
-          <div class="progress">
-            <div class="progress-fill" style="width: 80%;"></div>
-          </div>
+    <div class="main">
+        <div class="navbar">
+            <h2>Projects</h2>
+            <div class="user">
+                <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" width="50" alt="user">
+                <span>Admin</span>
+            </div>
         </div>
-
-        <div class="project-footer">
-          <span class="status running">Running</span>
-          <span class="deadline"> 15 Feb 2026</span>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>Doctor Appointment System</h3>
+                <p class="project-desc">A web app for booking doctor appointments online.</p>
+                <div class="project-progress">
+                    <p>Progress: <b>80%</b></p>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <span class="status running">Running</span>
+                    <span class="deadline"> 15 Feb 2026</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Interview Platform</h3>
+                <p class="project-desc">Online interview software with video call & coding editor.</p>
+                <div class="project-progress">
+                    <p>Progress: <b>60%</b></p>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <span class="status pending">Pending</span>
+                    <span class="deadline"> 25 Feb 2026</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Dashboard UI Design</h3>
+                <p class="project-desc">A modern admin dashboard UI using HTML & CSS.</p>
+                <div class="project-progress">
+                    <p>Progress: <b>100%</b></p>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <span class="status completed">Completed</span>
+                    <span class="deadline"> Done</span>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="table-box">
+            <h2>Project List</h2>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Client</th>
+                    <th>Budget</th>
+                    <th>Status</th>
+                </tr>
 
-      <div class="project-card">
-        <h3>Interview Platform</h3>
-        <p class="project-desc">Online interview software with video call & coding editor.</p>
+                <tr>
+                    <td>Doctor Appointment System</td>
+                    <td>Hospital Client</td>
+                    <td>₹ 50,000</td>
+                    <td class="active-status"><i class="fa-light fa-calendar-days"></i>Running</td>
+                </tr>
 
-        <div class="project-progress">
-          <p>Progress: <b>60%</b></p>
-          <div class="progress">
-            <div class="progress-fill" style="width: 60%;"></div>
-          </div>
+                <tr>
+                    <td>Interview Platform</td>
+                    <td>Startup Company</td>
+                    <td>₹ 70,000</td>
+                    <td class="pending-status"><i class="fa-light fa-calendar-days"></i>Pending</td>
+                </tr>
+
+                <tr>
+                    <td>Dashboard UI Design</td>
+                    <td>Personal Project</td>
+                    <td>₹ 10,000</td>
+                    <td class="active-status"><i class="fa-light fa-calendar-days"></i>Completed</td>
+                </tr>
+            </table>
         </div>
-
-        <div class="project-footer">
-          <span class="status pending">Pending</span>
-          <span class="deadline"> 25 Feb 2026</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Dashboard UI Design</h3>
-        <p class="project-desc">A modern admin dashboard UI using HTML & CSS.</p>
-
-        <div class="project-progress">
-          <p>Progress: <b>100%</b></p>
-          <div class="progress">
-            <div class="progress-fill" style="width: 100%;"></div>
-          </div>
-        </div>
-
-        <div class="project-footer">
-          <span class="status completed">Completed</span>
-          <span class="deadline"> Done</span>
-        </div>
-      </div>
-
     </div>
-
-    <!-- Project Table -->
-    <div class="table-box">
-      <h2>Project List</h2>
-
-      <table>
-        <tr>
-          <th>Project Name</th>
-          <th>Client</th>
-          <th>Budget</th>
-          <th>Status</th>
-        </tr>
-
-        <tr>
-          <td>Doctor Appointment System</td>
-          <td>Hospital Client</td>
-          <td>₹ 50,000</td>
-          <td class="active-status">Running</td>
-        </tr>
-
-        <tr>
-          <td>Interview Platform</td>
-          <td>Startup Company</td>
-          <td>₹ 70,000</td>
-          <td class="pending-status">Pending</td>
-        </tr>
-
-        <tr>
-          <td>Dashboard UI Design</td>
-          <td>Personal Project</td>
-          <td>₹ 10,000</td>
-          <td class="active-status">Completed</td>
-        </tr>
-
-      </table>
-    </div>
-
-  </div>
 
 </body>
 </html>

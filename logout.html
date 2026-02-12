@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logout</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="logoutstyle.css">
 </head>
 <body>
 
@@ -27,16 +28,52 @@
       <h2>Logout</h2>
     </div>
 
-    <div class="page-box">
-      <h2>You have been logged out!</h2>
-      <p>Thank you for using this dashboard. Come again </p>
-      <br>
-      <a href="index.html" style="color:#00d9ff; font-weight:bold; text-decoration:none;">
-         Go Back to Dashboard
-      </a>
+    <div class="logout-box">
+
+      <div class="logout-icon">
+        🚪
+      </div>
+
+      <h2>You Have Successfully Logged Out</h2>
+      <p>
+        Thank you for using <b>MyDashboard</b>.  
+        We hope to see you again soon 
+      </p>
+
+      <div class="logout-buttons">
+        <a href="index.html" class="logout-btn"> Back to Dashboard</a>
+        <a href="profile.html" class="logout-btn logout-btn-outline"> Login Again</a>
+      </div>
+
+      <p class="redirect-text">
+        Redirecting to Dashboard in <span id="countdown">10</span> seconds...
+      </p>
+
     </div>
 
   </div>
+
+
+  <script>
+    let theme = localStorage.getItem("theme") || "light";
+    document.body.classList.add(theme);
+  </script>
+
+  <script>
+    let seconds = 10;
+    let countdown = document.getElementById("countdown");
+
+    let timer = setInterval(() => {
+      seconds--;
+      countdown.innerHTML = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "index.html";
+      }
+    }, 1000);
+  </script>
+
 
 </body>
 </html>

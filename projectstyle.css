@@ -1,4 +1,3 @@
-/* Projects Page Design */
 .project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -35,7 +34,6 @@
   font-weight: bold;
 }
 
-/* Status Labels */
 .project-footer {
   display: flex;
   justify-content: space-between;
@@ -69,7 +67,6 @@
   font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .project-footer {
     flex-direction: column;

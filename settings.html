@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="settingstyle.css">
 </head>
+
 <body>
 
-  <!-- Sidebar -->
   <div class="sidebar">
     <h2 class="logo">MyDashboard</h2>
 
@@ -29,7 +30,7 @@
       <h2>Settings</h2>
 
       <div class="user">
-        <img src="https://i.pravatar.cc/50" alt="user">
+        <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" width="50" alt="user">
         <span>Admin</span>
       </div>
     </div>
@@ -60,7 +61,7 @@
             <input type="text" placeholder="Enter your location">
           </div>
 
-          <button type="submit" class="btn save-btn">Save Account Settings</button>
+          <button type="submit" class="save-btn">Save Account Settings</button>
         </form>
       </div>
 
@@ -83,7 +84,7 @@
             <input type="password" placeholder="Confirm new password">
           </div>
 
-          <button type="submit" class="btn save-btn">Update Password</button>
+          <button type="submit" class="save-btn">Update Password</button>
         </form>
       </div>
 
@@ -119,54 +120,42 @@
         </div>
       </div>
 
-    <div class="settings-box">
-    <h2>Theme Settings</h2>
+      <div class="settings-box">
+        <h2>Theme Settings</h2>
 
-    <p class="theme-text">Select Dashboard Theme:</p>
+        <p class="theme-text">Select Dashboard Theme:</p>
 
-    <div class="theme-buttons">
-        <button type="button" class="theme-btn" onclick="setLightMode()"> Light Mode</button>
-        <button type="button" class="theme-btn" onclick="setDarkMode()"> Dark Mode</button>
-    </div>
+        <div class="theme-buttons">
+          <button type="button" class="theme-btn" onclick="setTheme('light')"> Light Mode</button>
+          <button type="button" class="theme-btn" onclick="setTheme('dark')"> Dark Mode</button>
+        </div>
 
-    <button type="button" class="save-btn" onclick="applyTheme()">Apply Theme</button>
-
-    <p id="theme-message" style="margin-top:15px; font-weight:bold;"></p>
-    </div>
-
+        <p id="theme-message"></p>
+      </div>
 
     </div>
 
   </div>
 
+
+  <!-- WORKING THEME SCRIPT -->
+  <script>
+    function setTheme(theme) {
+      document.body.classList.remove("light", "dark");
+      document.body.classList.add(theme);
+
+      localStorage.setItem("theme", theme);
+
+      document.getElementById("theme-message").innerHTML =
+        " Theme Changed to " + theme.toUpperCase();
+    }
+
+    // Load theme on page refresh
+    window.onload = function () {
+      let savedTheme = localStorage.getItem("theme") || "light";
+      document.body.classList.add(savedTheme);
+    };
+  </script>
+
 </body>
-<script>
-  let selectedTheme = localStorage.getItem("theme") || "light";
-
-  // Apply Theme on Page Load
-  window.onload = function () {
-    document.body.classList.add(selectedTheme);
-  };
-
-  function setLightMode() {
-    selectedTheme = "light";
-    document.getElementById("theme-message").innerHTML = " Light Mode Selected";
-  }
-
-  function setDarkMode() {
-    selectedTheme = "dark";
-    document.getElementById("theme-message").innerHTML = " Dark Mode Selected";
-  }
-
-  function applyTheme() {
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(selectedTheme);
-
-    localStorage.setItem("theme", selectedTheme);
-
-    document.getElementById("theme-message").innerHTML =
-      "✅ Theme Applied Successfully!";
-  }
-</script>
-
 </html>

@@ -66,7 +66,7 @@
 }
 
 /* Save Button */
-.settings-box .save-btn {
+.save-btn {
   width: 100%;
   padding: 12px;
   border-radius: 12px;
@@ -79,7 +79,7 @@
   transition: 0.3s ease;
 }
 
-.settings-box .save-btn:hover {
+.save-btn:hover {
   opacity: 0.9;
   transform: scale(1.02);
 }
@@ -93,7 +93,7 @@
   margin-bottom: 15px;
   border-radius: 14px;
   background: #f9f9f9;
-  border: 1px solid #eee;
+  border:  1px solid #eee;
   transition: 0.3s ease;
 }
 
@@ -144,7 +144,6 @@
   background: white;
   transition: 0.4s;
   border-radius: 50%;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .switch input:checked + .slider {
@@ -169,7 +168,6 @@
   margin-bottom: 15px;
 }
 
-/* Theme Button */
 .theme-btn {
   flex: 1;
   padding: 12px;
@@ -189,20 +187,24 @@
   transform: scale(1.03);
 }
 
+#theme-message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #007bff;
+}
+
 /* ============================= */
 /*       LIGHT / DARK MODE       */
 /* ============================= */
 
-/* Light Mode Default */
+/* Light Mode */
 body.light {
   background: #f4f6f9;
   color: black;
 }
 
-/* Light Mode Settings Box */
-body.light .settings-box {
-  background: white;
-  color: black;
+body.light .main {
+  background: #f4f6f9;
 }
 
 /* Dark Mode */
@@ -211,27 +213,22 @@ body.dark {
   color: white;
 }
 
+body.dark .main {
+  background: #121212;
+}
+
 /* Dark Mode Sidebar */
 body.dark .sidebar {
   background: #181818;
   color: white;
 }
 
-/* Dark Mode Sidebar Links */
+/* Sidebar links */
 body.dark .sidebar ul li a {
   color: white;
 }
 
-/* Hover Effect Sidebar */
-body.dark .sidebar ul li:hover {
-  background: #00d9ff;
-}
-
-body.dark .sidebar ul li:hover a {
-  color: black;
-}
-
-/* Active Sidebar Link */
+/* Dark Mode Active Menu */
 body.dark .sidebar ul li.active {
   background: #00d9ff;
 }
@@ -240,49 +237,25 @@ body.dark .sidebar ul li.active a {
   color: black;
 }
 
-/* Dark Mode Main Sections */
-body.dark .navbar,
-body.dark .card,
-body.dark .table-box,
-body.dark .page-box,
-body.dark .settings-box,
-body.dark .profile-card,
-body.dark .profile-form,
-body.dark .chart-box,
-body.dark .traffic-box,
-body.dark .project-card {
+/* Dark Mode Hover Menu */
+body.dark .sidebar ul li:hover {
+  background: #00d9ff;
+}
+
+body.dark .sidebar ul li:hover a {
+  color: black;
+}
+
+/* Dark Mode Boxes */
+body.dark .settings-box {
   background: #1e1e1e;
-  color: white;
-  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.05);
   border: 1px solid #2a2a2a;
-}
-
-/* Dark Mode Text */
-body.dark h2,
-body.dark h3,
-body.dark p,
-body.dark label {
   color: white;
 }
 
-/* Dark Mode Inputs */
-body.dark input,
-body.dark textarea {
-  background: #2a2a2a;
-  border: 1px solid #444;
+/* Dark Mode Heading */
+body.dark .settings-box h2 {
   color: white;
-}
-
-body.dark input::placeholder,
-body.dark textarea::placeholder {
-  color: #bbb;
-}
-
-/* Dark Mode Input Focus */
-body.dark input:focus,
-body.dark textarea:focus {
-  border-color: #00d9ff;
-  box-shadow: 0px 0px 6px rgba(0, 217, 255, 0.5);
 }
 
 /* Dark Mode Toggle Box */
@@ -291,12 +264,22 @@ body.dark .toggle-box {
   border: 1px solid #444;
 }
 
-body.dark .toggle-box:hover {
-  background: #1b1b1b;
-  border-color: #00d9ff;
+body.dark .toggle-box p {
+  color: white;
 }
 
-/* Dark Mode Theme Button */
+/* Dark Mode Inputs */
+body.dark input {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: white;
+}
+
+body.dark input::placeholder {
+  color: #bbb;
+}
+
+/* Dark Mode Theme Buttons */
 body.dark .theme-btn {
   background: #2a2a2a;
   border: 1px solid #555;
@@ -308,15 +291,9 @@ body.dark .theme-btn:hover {
   color: black;
 }
 
-/* Dark Mode Save Button */
-body.dark .save-btn {
-  background: linear-gradient(135deg, #00d9ff, #007bff);
-  color: white;
-}
-
-/* Dark Mode Slider */
-body.dark .slider {
-  background: #555;
+/* Dark Mode Message */
+body.dark #theme-message {
+  color: #00d9ff;
 }
 
 /* Responsive */
